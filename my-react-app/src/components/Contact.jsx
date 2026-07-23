@@ -1,6 +1,31 @@
 import CV from "/CV Jonathan Scazzola ENG.pdf"
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
 
 export function Contact() {
+  const form = useRef();
+  const [sending, setSending] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    setSending(true);
+
+    try {
+      await emailjs.sendForm("service_m1xpg3m", "template_abireji", form.current, "bakzcL6HI6n6OA-wd");
+
+      setSuccess(true);
+      form.current.reset();
+
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong with sending the form email.");
+    }
+
+    setSending(false);
+  };
+
   return (
     <section id="contact" className="py-24 bg-slate-800 text-white">
 
@@ -58,15 +83,23 @@ export function Contact() {
 
 
           {/* Form */}
-          <form className="bg-slate-900 p-8 rounded-2xl space-y-5" action="https://formspree.io/f/xpqvjlpn" method="POST">
+          <form className="bg-slate-900 p-8 rounded-2xl space-y-5" ref={form} onSubmit={sendEmail}>
 
-            <input type="text" placeholder="Your Name" className="w-full bg-slate-800 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500" />
-            <input type="email" placeholder="Your Email" className="w-full bg-slate-800 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"/>
-            <textarea rows="5" placeholder="Your Message" className="w-full bg-slate-800 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"/>
+            <input name="user_name" type="text" placeholder="Your Name" className="w-full bg-slate-800 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500" />
+            <input name="user_email" type="email" placeholder="Your Email" className="w-full bg-slate-800 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"/>
+            <textarea name="message" rows="5" placeholder="Your Message" className="w-full bg-slate-800 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"/>
 
-            <button type="submit" className="w-full bg-blue-600 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-              Send Message
+            {/* From button */}
+            <button type="submit" disabled={sending} className="w-full bg-blue-600 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+              {sending ? "Sending..." : "Send Message"}
             </button>
+            
+            {//Success form text
+              success && (
+              <p className="text-green-400 mt-4">
+                Message sent successfully!
+              </p>
+            )}
 
           </form>
 
