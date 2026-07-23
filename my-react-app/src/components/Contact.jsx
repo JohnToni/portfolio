@@ -1,3 +1,5 @@
+import CV from "/CV Jonathan Scazzola ENG.pdf"
+
 export function Contact() {
   return (
     <section id="contact" className="py-24 bg-slate-800 text-white">
@@ -45,6 +47,9 @@ export function Contact() {
 
                 <a href="tel:+393513166725" className="block text-blue-400 hover:text-blue-300">
                     📱(+39) 3513166725
+                </a>
+                <a href={CV} download className="block text-blue-400 hover:text-blue-300">
+                    📄 Download CV
                 </a>
 
             </div>

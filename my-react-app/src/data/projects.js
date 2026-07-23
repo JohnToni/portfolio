@@ -27,16 +27,17 @@ export const projects = [
   },
 
   {
-    title: "Weather App",
+    title: "ComeToMe",
     description:
-      "A weather application using an external API to display current weather information.",
-    image: "/img/weather.png",
+      "A web application I built from scratch. It lets users create accounts, give away unwanted items for free, and connect with others to promote reuse and reduce waste.",
+    image: "/img/come-to-me-logo.png",
     technologies: [
-      "React",
-      "API",
+      "HTML",
+      "JavaScript",
       "CSS",
+      "PHP"
     ],
     github:
-      "https://github.com/yourusername/weather-app",
+      "https://github.com/JohnToni/ComeToMe",
   },
 ];
