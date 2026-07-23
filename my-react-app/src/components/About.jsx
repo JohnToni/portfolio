@@ -1,6 +1,6 @@
 export function About() {
   return (
-    <section id="about" className="py-24 bg-slate-800 text-white">
+    <section id="about-section" className="py-24 bg-slate-800 text-white">
       <div className="max-w-6xl mx-auto px-6">
 
         <h2 className="text-4xl font-bold mb-8">
@@ -21,7 +21,7 @@ export function About() {
 
             <div className="bg-slate-700 p-6 rounded-xl hover:-translate-y-2 hover:bg-slate-600 transition-all duration-300">
                 <h3 className="text-3xl font-bold text-blue-400">
-                3+
+                  3+
                 </h3>
                 <p className="text-slate-300 mt-2">
                 Years Learning
@@ -30,7 +30,7 @@ export function About() {
 
             <div className="bg-slate-700 p-6 rounded-xl hover:-translate-y-2 hover:bg-slate-600 transition-all duration-300">
                 <h3 className="text-3xl font-bold text-blue-400">
-                10+
+                  10+
                 </h3>
                 <p className="text-slate-300 mt-2">
                 Projects Built
@@ -39,7 +39,7 @@ export function About() {
 
             <div className="bg-slate-700 p-6 rounded-xl hover:-translate-y-2 hover:bg-slate-600 transition-all duration-300">
                 <h3 className="text-3xl font-bold text-blue-400">
-                7+
+                  7+
                 </h3>
                 <p className="text-slate-300 mt-2">
                 Technologies

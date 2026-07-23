@@ -17,7 +17,7 @@ export function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                
+                    <p></p>
                     <p className="text-blue-500 font-semibold">
                         Hello, I'm
                     </p>
