@@ -1,5 +1,6 @@
 import profilePic from '/img/profile-pic.jpg'
 import { motion } from 'framer-motion'
+import CV from "/CV Jonathan Scazzola ENG.pdf"
 
 export function Hero() {
   return (
@@ -36,6 +37,10 @@ export function Hero() {
 
                         <a href="#contact" className="bg-blue-600 px-7 py-3 roundedx1 font-medium hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300 shadow-lg">
                             Contact Me</a>
+
+                        <a href={CV} download className="bg-blue-600 px-7 py-3 roundedx1 font-medium hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                            Download CV
+                        </a>
                     </div>
                 
                 </motion.div>
