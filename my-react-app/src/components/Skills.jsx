@@ -26,6 +26,7 @@ export  function Skills() {
             const Icon = skill.icon;
             return (
                 <motion.div
+                  key={skill.name}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
