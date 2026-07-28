@@ -19,10 +19,11 @@ export function Navbar() {
             items-center     -> Vertically centers the logo and menu. */ }
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-            <h1 className="text-2xl font-bold">JS</h1>
+            { /*<h1 className="text-2xl font-bold">JS</h1> */}
+            <img id="icon" type="image/svg+xml" src="/icon.svg" className="w-10" />
 
             {/*Starting at the medium breakpoint (768px), display it as a flex container.*/}
-            <ul className="hidden md:flex gap-8">
+            <ul className="flex max-md:hidden gap-8">
                 {/*
                     hover:text-blue-400     -> changes the color on hover.
                     transition-colors       -> animates the color change.
