@@ -1,6 +1,6 @@
 import profilePic from '/img/profile-pic.jpg'
 import { motion } from 'framer-motion'
-import CV from "/CV Jonathan Scazzola ENG.pdf"
+import CV from '/jonathan-scazzola-cv-eng.pdf'
 
 export function Hero() {
   return (
@@ -10,7 +10,7 @@ export function Hero() {
 
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
-            <div className="grid md:grid-cols-2 items-center gap-15">
+            <div className="grid md:grid-cols-2 items-center gap-16">
                 
                 {/* Text on the left - with transition effect */}
                 <motion.div id='leftSide'
@@ -18,7 +18,6 @@ export function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <p></p>
                     <p className="text-blue-500 font-semibold">
                         Hello, I'm
                     </p>
@@ -35,10 +34,10 @@ export function Hero() {
 
                     <div id='leftSide-buttons' className="flex gap-4 mt-8">
 
-                        <a href="#contact" className="bg-blue-600 px-7 py-3 roundedx1 font-medium hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                        <a href="#contact" className="bg-blue-600 px-7 py-3 rounded-x1 font-medium hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300 shadow-lg">
                             Contact Me</a>
 
-                        <a href={CV} download className="bg-blue-600 px-7 py-3 roundedx1 font-medium hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                        <a href={CV} download className="border-2 border-blue-500 text-blue-300 px-7 py-3 rounded-xl font-medium hover:bg-blue-500/10 hover:-translate-y-1 transition-all duration-300">
                             Download CV
                         </a>
                     </div>
