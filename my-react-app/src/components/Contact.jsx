@@ -1,4 +1,4 @@
-import CV from "/CV Jonathan Scazzola ENG.pdf"
+import CV from "/jonathan-scazzola-cv-eng.pdf"
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
