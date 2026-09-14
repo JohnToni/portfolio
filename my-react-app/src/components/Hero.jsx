@@ -28,8 +28,9 @@ export function Hero() {
                         🚀 Backend/Frontend Developer
                     </div>
                     <p className="mt-6 max-w-xl text-lg text-white leading-8 text-slate-400">
-                        I build modern, responsive web applications using React, HTML, CSS, JavaScript, Tailwind CSS, PHP, MySQL, and SQL, 
-                        while developing software projects in C, C++, C#, Java, and working with databases.
+                        I develop modern, responsive web applications and software solutions using a range of contemporary 
+                        programming languages, frameworks, and database technologies, with a strong foundation 
+                        in both front-end and back-end development.
                     </p>
 
                     <div id='leftSide-buttons' className="flex gap-4 mt-8">

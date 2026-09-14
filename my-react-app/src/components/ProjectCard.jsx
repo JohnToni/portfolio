@@ -30,7 +30,22 @@ export function ProjectCard({ project }) {
 
         {/* Button */}
         <div className="flex gap-4 mt-6">
-          <a href={project.github} target="_blank" className="px-4 py-2 bg-slate-700 rounded-lg hover:bg-slate-600">
+          <a href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 bg-slate-700 rounded-lg hover:bg-slate-600"
+          >
+            GitHub
+          </a>
+        </div>
+
+        {/* Button */}
+        <div className="flex gap-4 mt-6">
+          <a href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 bg-slate-700 rounded-lg hover:bg-slate-600"
+          >
             GitHub
           </a>
         </div>

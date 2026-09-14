@@ -6,7 +6,7 @@ export  function Skills() {
     <section id="skills" className="relative py-24 bg-gradient-to-b from-slate-900 to-slate-800 text-white overflow-hidden">
 
       {/* Background glow */}
-      <div className="absolute top-20 left-1/2-translate-x-1/2 w-96 h-96 bg-blue-600 opacity-10 blur-3xl rounded-full" />
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-blue-600 opacity-10 blur-3xl rounded-full" />
 
       <div className="relative max-w-6xl mx-auto px-6">
 
@@ -21,7 +21,7 @@ export  function Skills() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
-          {skills.map((skill) => {
+          {skills.map((skill, index) => {
 
             const Icon = skill.icon;
             return (
@@ -30,10 +30,10 @@ export  function Skills() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
                   className="bg-slate-800/70 backdrop-blur border border-slate-700 rounded-2xl p-8 flex flex-col items-center gap-4 shadow-lg hover:border-blue-500 hover:-translate-y-2 transition-all duration-300"
                 >
-                  <Icon className="text-5xl text-blue-400" />
+                  <Icon className="text-5xl text-blue-400" aria-hidden="true" />
 
                   <h3 className="font-semibold text-lg">
                       {skill.name}
